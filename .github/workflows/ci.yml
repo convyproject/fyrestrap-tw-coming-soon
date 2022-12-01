@@ -12,14 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Deploy Using ssh
-        uses: appleboy/ssh-action@master
+      - name: Remote SSH Commands
+        uses: fifsky/ssh-action@v0.0.6
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
-          script: |
+          user: ${{ secrets.SSH_USERNAME }}
+          pass: ${{ secrets.SSH_PASS }}
+          command: |
             cd ~/projects/landing-page
             git pull origin main
             ./run.sh
