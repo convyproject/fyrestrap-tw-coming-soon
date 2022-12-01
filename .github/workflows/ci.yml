@@ -23,4 +23,5 @@ jobs:
             git pull origin main
             chmod +x ./run.sh
             chmod +x ./serve.sh
+            which pm2
             ./run.sh
