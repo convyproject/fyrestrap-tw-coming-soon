@@ -21,5 +21,6 @@ jobs:
           command: |
             cd ~/projects/landing-page
             git pull origin main
-            ls
+            chmod +x ./run.sh
+            chmod +x ./serve.sh
             ./run.sh
