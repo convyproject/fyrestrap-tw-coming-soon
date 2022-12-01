@@ -21,4 +21,5 @@ jobs:
           command: |
             cd ~/projects/landing-page
             git pull origin main
+            ls
             ./run.sh
