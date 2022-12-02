@@ -19,7 +19,8 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASS }}
           script: |
-            whoami
+            which npm
+            which node
             cd ~/projects/landing-page
             git pull origin main
             chmod +x ./run.sh
